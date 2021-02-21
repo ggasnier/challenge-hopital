@@ -2,4 +2,32 @@
   grid-area: app;
   background-color: $bleuflash;
   padding: 3rem;
+  color: $blanc;
+
+  & > div {
+    display: flex;
+
+    :first-child {
+      line-height: 0;
+      margin-right: 3rem;
+
+      img {
+        max-width: 30rem;
+      }
+    }
+
+    p:first-child {
+      display: none;
+    }
+
+    a {
+      color: #fff;
+      background-color: black;
+      text-decoration: none;
+      line-height: 6rem;
+      padding: 0 3rem;
+      display: inline-block;
+      border-radius: 1rem;
+    }
+  }
 }
