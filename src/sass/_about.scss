@@ -1,0 +1,33 @@
+#about {
+  grid-area: about;
+  background-color: $blanc;
+  padding: 3rem;
+
+  & > div {
+    & > div:nth-last-of-type(1) {
+      display: flex;
+      justify-content: center;
+
+      div {
+        text-align: center;
+        background-color: $bleuflash;
+        margin: 0 3rem;
+        padding: 3rem;
+        border-radius: 1rem;
+        width: 17rem;
+
+        color: $blanc;
+
+        .fa {
+          font-size: 6rem;
+          line-height: 6rem;
+          margin-bottom: 2rem;
+        }
+
+        h4 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+#infos {
+  grid-area: infos;
+  background-color: $bleuflash;
+  padding: 3rem;
+  padding-left: 0;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      color: $blanc;
+
+      .fa {
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 4rem;
+        float: left;
+      }
+
+      h3 {
+      }
+
+      p {
+      }
+    }
+  }
+}

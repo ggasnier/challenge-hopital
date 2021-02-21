@@ -1,0 +1,24 @@
+{
+  "name": "challenge_hopital",
+  "version": "1.0.0",
+  "description": "Url du challenge : https://www.youtube.com/watch?v=vF2IpkKkVyE",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggasnier/challenge-hopital.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ggasnier/challenge-hopital/issues"
+  },
+  "homepage": "https://github.com/ggasnier/challenge-hopital#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}

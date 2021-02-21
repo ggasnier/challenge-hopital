@@ -1,0 +1,39 @@
+#services {
+  grid-area: services;
+  background-color: $blanc;
+  padding: 3rem;
+
+  & > div {
+    & > div:first-of-type {
+      h6 {
+        display: none;
+      }
+
+      h3 {
+      }
+    }
+
+    & > div:nth-last-of-type(1) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem;
+      column-gap: 3rem;
+
+      div {
+        div > span {
+          font-size: 3rem;
+          line-height: 3rem;
+          width: 4rem;
+          float: left;
+        }
+
+        div > h4 {
+        }
+
+        div > p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

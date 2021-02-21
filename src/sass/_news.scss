@@ -1,0 +1,16 @@
+#news {
+  grid-area: news;
+  background-color: $blanc;
+  padding: 3rem;
+
+  h6 {
+    display: none;
+  }
+
+  & > div {
+  }
+
+  & > div:nth-last-of-type(1) {
+    display: flex;
+  }
+}

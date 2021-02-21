@@ -1,0 +1,33 @@
+#doctors {
+  grid-area: doctors;
+  background-color: $bleuflash;
+  padding: 3rem;
+
+  & > div {
+    h3 {
+      color: $blanc;
+    }
+
+    h6 {
+      display: none;
+    }
+
+    & > div:nth-last-of-type(1) {
+      display: flex;
+      justify-content: center;
+
+      div {
+        max-width: 30rem;
+        text-align: center;
+
+        h4 {
+          color: $blanc;
+        }
+        h6 {
+          color: $blanc;
+          display: inline;
+        }
+      }
+    }
+  }
+}

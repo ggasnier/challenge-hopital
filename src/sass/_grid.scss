@@ -1,0 +1,33 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'home home home'
+    'appointment appointment infos'
+    'services services services'
+    'app app facts'
+    'about about about'
+    'doctors doctors doctors'
+    'news news news'
+    'contact contact contact'
+    'footer footer footer';
+}
+
+// body > a {
+//   position: fixed;
+//   bottom: 0;
+//   right: 0;
+//   width: 3rem;
+//   height: 3rem;
+// }
+
+footer {
+  grid-area: footer;
+  background-color: $blanc;
+}
+
+body > p {
+  /*grid-area: credits;
+  background: red;*/
+  display: none;
+}

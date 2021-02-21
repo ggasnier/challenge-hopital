@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 0.625em;
+  font-size: calc(1em * 0.625); }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #232323;
+  text-align: left;
+  background-color: #fff; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  line-height: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 3rem 0;
+  font-size: 3rem;
+  font-weight: 400; }
+
+p {
+  margin: 0 0 3rem 0; }
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'home home home' 'appointment appointment infos' 'services services services' 'app app facts' 'about about about' 'doctors doctors doctors' 'news news news' 'contact contact contact' 'footer footer footer'; }
+
+footer {
+  grid-area: footer;
+  background-color: #fff; }
+
+body > p {
+  /*grid-area: credits;
+  background: red;*/
+  display: none; }
+
+#application {
+  grid-area: app;
+  background-color: #2bb2a9;
+  padding: 3rem; }
+
+#home {
+  grid-area: home;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ' nav nav ' ' banner banner';
+  background-color: #fff; }
+  #home header {
+    display: none; }
+  #home > div:first-of-type {
+    grid-area: nav;
+    background-color: #2bb2a9;
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;*/ }
+    #home > div:first-of-type nav label,
+    #home > div:first-of-type nav input {
+      display: none; }
+    #home > div:first-of-type nav ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      #home > div:first-of-type nav ul li {
+        line-height: 6rem;
+        width: calc(100% / 6);
+        text-align: center; }
+        #home > div:first-of-type nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.8rem; }
+        #home > div:first-of-type nav ul li:hover {
+          background: rgba(0, 0, 0, 0.1); }
+        #home > div:first-of-type nav ul li ul {
+          display: none; }
+        #home > div:first-of-type nav ul li label,
+        #home > div:first-of-type nav ul li input {
+          display: none; }
+  #home > div:nth-last-of-type(1) {
+    grid-area: banner;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 3rem; }
+
+#contact {
+  grid-area: contact;
+  background-color: #2bb2a9;
+  padding: 3rem; }
+  #contact h6 {
+    display: none; }
+  #contact h3 {
+    color: #fff; }
+  #contact form {
+    display: flex;
+    flex-direction: column; }
+    #contact form input {
+      height: 5rem;
+      border: none;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem; }
+      #contact form input:focus {
+        outline: none; }
+    #contact form textarea {
+      border: none;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      height: 5rem; }
+      #contact form textarea:focus {
+        outline: none; }
+    #contact form button {
+      height: 5rem;
+      border: none;
+      border-radius: 1rem;
+      padding: 1rem; }
+
+#news {
+  grid-area: news;
+  background-color: #fff;
+  padding: 3rem; }
+  #news h6 {
+    display: none; }
+  #news > div:nth-last-of-type(1) {
+    display: flex; }
+
+#facts {
+  grid-area: facts;
+  background-color: #2bb2a9;
+  padding: 3rem; }
+
+#infos {
+  grid-area: infos;
+  background-color: #2bb2a9;
+  padding: 3rem;
+  padding-left: 0; }
+  #infos > div {
+    display: flex;
+    flex-direction: column; }
+    #infos > div div {
+      color: #fff; }
+      #infos > div div .fa {
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 4rem;
+        float: left; }
+
+#appointment {
+  grid-area: appointment;
+  background-color: #2bb2a9;
+  padding: 3rem; }
+  #appointment > div {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Le formulaire */
+    /* l'image */ }
+    #appointment > div > div:first-of-type {
+      flex: 1; }
+      #appointment > div > div:first-of-type h3 {
+        color: #fff; }
+      #appointment > div > div:first-of-type form {
+        display: flex;
+        flex-direction: column; }
+        #appointment > div > div:first-of-type form input {
+          height: 5rem;
+          border: none;
+          border-radius: 1rem;
+          padding: 1rem;
+          margin-bottom: 1rem; }
+          #appointment > div > div:first-of-type form input:focus {
+            outline: none; }
+        #appointment > div > div:first-of-type form button {
+          height: 5rem;
+          border: none;
+          border-radius: 1rem;
+          padding: 1rem; }
+    #appointment > div > div:nth-last-of-type(1) {
+      max-width: 50%;
+      padding-right: 3rem; }
+
+#services {
+  grid-area: services;
+  background-color: #fff;
+  padding: 3rem; }
+  #services > div > div:first-of-type h6 {
+    display: none; }
+  #services > div > div:nth-last-of-type(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+    column-gap: 3rem; }
+    #services > div > div:nth-last-of-type(1) div div > span {
+      font-size: 3rem;
+      line-height: 3rem;
+      width: 4rem;
+      float: left; }
+    #services > div > div:nth-last-of-type(1) div div > p {
+      margin: 0; }
+
+#about {
+  grid-area: about;
+  background-color: #fff;
+  padding: 3rem; }
+  #about > div > div:nth-last-of-type(1) {
+    display: flex;
+    justify-content: center; }
+    #about > div > div:nth-last-of-type(1) div {
+      text-align: center;
+      background-color: #2bb2a9;
+      margin: 0 3rem;
+      padding: 3rem;
+      border-radius: 1rem;
+      width: 17rem;
+      color: #fff; }
+      #about > div > div:nth-last-of-type(1) div .fa {
+        font-size: 6rem;
+        line-height: 6rem;
+        margin-bottom: 2rem; }
+      #about > div > div:nth-last-of-type(1) div h4 {
+        margin: 0; }
+
+#doctors {
+  grid-area: doctors;
+  background-color: #2bb2a9;
+  padding: 3rem; }
+  #doctors > div h3 {
+    color: #fff; }
+  #doctors > div h6 {
+    display: none; }
+  #doctors > div > div:nth-last-of-type(1) {
+    display: flex;
+    justify-content: center; }
+    #doctors > div > div:nth-last-of-type(1) div {
+      max-width: 30rem;
+      text-align: center; }
+      #doctors > div > div:nth-last-of-type(1) div h4 {
+        color: #fff; }
+      #doctors > div > div:nth-last-of-type(1) div h6 {
+        color: #fff;
+        display: inline; }
