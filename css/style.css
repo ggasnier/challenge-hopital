@@ -242,7 +242,7 @@ body > p {
     /* l'image */ }
     @media screen and (min-width: 640px) {
       #appointment > div {
-        flex-direction: ow-reverse; } }
+        flex-direction: row-reverse; } }
     #appointment > div > div:first-of-type {
       flex: 1; }
       #appointment > div > div:first-of-type h3 {
