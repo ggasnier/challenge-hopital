@@ -7,6 +7,11 @@
     & > div:nth-last-of-type(1) {
       display: flex;
       justify-content: center;
+      flex-direction: column;
+
+      @media screen and (min-width: 640px) {
+        flex-direction: row;
+      }
 
       div {
         text-align: center;

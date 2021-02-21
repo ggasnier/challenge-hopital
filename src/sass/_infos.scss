@@ -2,7 +2,10 @@
   grid-area: infos;
   background-color: $bleuflash;
   padding: 3rem;
-  padding-left: 0;
+
+  @media screen and (min-width: 640px) {
+    padding-left: 0;
+  }
 
   & > div {
     display: flex;

@@ -1,16 +1,36 @@
 body {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    'home home home'
-    'appointment appointment infos'
-    'services services services'
-    'app app facts'
-    'about about about'
-    'doctors doctors doctors'
-    'news news news'
-    'contact contact contact'
-    'footer footer footer';
+    'home'
+    'appointment'
+    'infos'
+    'services'
+    'app'
+    'facts'
+    'about'
+    'doctors'
+    'news'
+    'contact'
+    'footer';
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'home home home'
+      'appointment appointment infos'
+      'services services services'
+      'app app facts'
+      'about about about'
+      'doctors doctors doctors'
+      'news news news'
+      'contact contact contact'
+      'footer footer footer';
+  }
+
+  & > * {
+    overflow: hidden;
+  }
 }
 
 // body > a {
@@ -25,10 +45,14 @@ footer {
   grid-area: footer;
   background-color: $blanc;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 3rem;
   row-gap: 3rem;
   column-gap: 3rem;
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   a {
     color: $bleuflash;

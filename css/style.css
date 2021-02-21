@@ -41,17 +41,26 @@ p {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 'home home home' 'appointment appointment infos' 'services services services' 'app app facts' 'about about about' 'doctors doctors doctors' 'news news news' 'contact contact contact' 'footer footer footer'; }
+  grid-template-columns: 1fr;
+  grid-template-areas: 'home' 'appointment' 'infos' 'services' 'app' 'facts' 'about' 'doctors' 'news' 'contact' 'footer'; }
+  @media screen and (min-width: 640px) {
+    body {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 'home home home' 'appointment appointment infos' 'services services services' 'app app facts' 'about about about' 'doctors doctors doctors' 'news news news' 'contact contact contact' 'footer footer footer'; } }
+  body > * {
+    overflow: hidden; }
 
 footer {
   grid-area: footer;
   background-color: #fff;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 3rem;
   row-gap: 3rem;
   column-gap: 3rem; }
+  @media screen and (min-width: 640px) {
+    footer {
+      grid-template-columns: 1fr 1fr 1fr; } }
   footer a {
     color: #2bb2a9;
     text-decoration: none; }
@@ -69,7 +78,11 @@ body > p {
   padding: 3rem;
   color: #fff; }
   #application > div {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
+    @media screen and (min-width: 640px) {
+      #application > div {
+        flex-direction: row; } }
     #application > div :first-child {
       line-height: 0;
       margin-right: 3rem; }
@@ -110,7 +123,11 @@ body > p {
       justify-content: space-between;
       list-style-type: none;
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      flex-direction: column; }
+      @media screen and (min-width: 640px) {
+        #home > div:first-of-type nav ul {
+          flex-direction: row; } }
       #home > div:first-of-type nav ul li {
         line-height: 6rem;
         width: calc(100% / 6);
@@ -130,8 +147,11 @@ body > p {
     grid-area: banner;
     display: flex;
     padding: 3rem;
-    flex-direction: column-reverse;
-    text-align: center; }
+    text-align: center;
+    flex-direction: column; }
+    @media screen and (min-width: 640px) {
+      #home > div:nth-last-of-type(1) {
+        flex-direction: column-reverse; } }
     #home > div:nth-last-of-type(1) a {
       color: #2bb2a9;
       text-decoration: none; }
@@ -180,8 +200,12 @@ body > p {
     display: none; }
   #news > div:nth-last-of-type(1) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 3rem; }
+    grid-template-columns: 1fr;
+    column-gap: 3rem;
+    row-gap: 3rem; }
+    @media screen and (min-width: 640px) {
+      #news > div:nth-last-of-type(1) {
+        grid-template-columns: 1fr 1fr 1fr; } }
 
 #facts {
   grid-area: facts;
@@ -192,8 +216,10 @@ body > p {
 #infos {
   grid-area: infos;
   background-color: #2bb2a9;
-  padding: 3rem;
-  padding-left: 0; }
+  padding: 3rem; }
+  @media screen and (min-width: 640px) {
+    #infos {
+      padding-left: 0; } }
   #infos > div {
     display: flex;
     flex-direction: column; }
@@ -211,9 +237,12 @@ body > p {
   padding: 3rem; }
   #appointment > div {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
     /* Le formulaire */
     /* l'image */ }
+    @media screen and (min-width: 640px) {
+      #appointment > div {
+        flex-direction: ow-reverse; } }
     #appointment > div > div:first-of-type {
       flex: 1; }
       #appointment > div > div:first-of-type h3 {
@@ -246,9 +275,12 @@ body > p {
     display: none; }
   #services > div > div:nth-last-of-type(1) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     row-gap: 3rem;
     column-gap: 3rem; }
+    @media screen and (min-width: 640px) {
+      #services > div > div:nth-last-of-type(1) {
+        grid-template-columns: 1fr 1fr; } }
     #services > div > div:nth-last-of-type(1) div div > span {
       font-size: 3rem;
       line-height: 3rem;
@@ -263,7 +295,11 @@ body > p {
   padding: 3rem; }
   #about > div > div:nth-last-of-type(1) {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    flex-direction: column; }
+    @media screen and (min-width: 640px) {
+      #about > div > div:nth-last-of-type(1) {
+        flex-direction: row; } }
     #about > div > div:nth-last-of-type(1) div {
       text-align: center;
       background-color: #2bb2a9;
@@ -289,7 +325,11 @@ body > p {
     display: none; }
   #doctors > div > div:nth-last-of-type(1) {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    flex-direction: column; }
+    @media screen and (min-width: 640px) {
+      #doctors > div > div:nth-last-of-type(1) {
+        flex-direction: row; } }
     #doctors > div > div:nth-last-of-type(1) div {
       max-width: 30rem;
       text-align: center; }
